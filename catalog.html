@@ -7,33 +7,40 @@
   <body>
     <header class="page-header">
       <nav class="page-header__navigation navigation">
-        <a href="#" class="logo">
-          <img src="#" alt="Логотип города Седона">
+        <a class="logo" href="#">
+          <img class="logo__image" src="#" alt="Логотип города Седона">
         </a>
 
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="index.html" class="navigation__link navigation__link--active">Главная</a>
+            <a class="navigation__link navigation__link--active" href="#">Главная</a>
           </li>
           <li class="navigation__item">
-            <a href="index.html" class="navigation__link">О седоне</a>
+            <a class="navigation__link" href="#">О Cедоне</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Гостиницы</a>
+            <a class="navigation__link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
 
-        <div class="page-header__user-menu user-menu">
-          <button class="user-menu__icon user-menu__search">
-            <span class="visually-hidden">Поиск по сайту</span>
-          </button>
-          <a class="user-menu__icon user-menu__favorites favorites" href="#">
-            <span class="visually-hidden">Избранное</span>
-            <span class="favorites__counter">12</span>
-          </a>
-          <a href="#" class="user-menu__button button">Хочу сюда!</a>
-        </div>
+        <ul class="navigation__user-menu user-menu">
+          <li class="user-menu__item">
+            <a class="user-menu__link search" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link favorites" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="favorites__counter">12</span>
+            </a>
+          </li>
+        </ul>
+
+        <a class="page-header__button button" href="#">Хочу сюда!</a>
       </nav>
+
+      <img class="page-header__background" src="#" alt="Welcome to the gorgeous Sedona, becouse the Grand Canyon sucks!" width="1200" height="485">
     </header>
 
     <main class="page-main">
@@ -46,7 +53,8 @@
           </a>
         </li>
         <li class="path-navigation__item">
-          <a  class="path-navigation__link" href="catalog.html">
+          <a class="path-navigation__link" href="catalog.html">
+            Гостиницы
             <span class="visually-hidden">Переход на страницу гостинниц</span>
           </a>
         </li>
@@ -62,13 +70,13 @@
             <ul class="filter__list">
               <li class="filter__item">
                 <label class="sort">
-                  <input class="sort__input" type="checkbox" name="infrastructure" value="swiming-pool">
+                  <input class="sort__input" type="checkbox" name="infrastructure" value="swiming-pool" checked>
                   <span class="sort__name">Бассейн</span>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="sort">
-                  <input class="sort__input" type="checkbox" name="infrastructure" value="parking">
+                  <input class="sort__input" type="checkbox" name="infrastructure" value="parking" checked>
                   <span class="sort__name">Парковка</span>
                 </label>
               </li>
@@ -87,7 +95,7 @@
             <ul class="filter__list">
               <li class="filter__item">
                 <label class="sort">
-                  <input class="sort__input" type="radio" name="dwelling" value="hotel">
+                  <input class="sort__input" type="radio" name="dwelling" value="hotel" checked>
                   <span class="sort__name">Гостинница</span>
                 </label>
               </li>
@@ -111,12 +119,13 @@
 
             <div class="filter__price price">
               <label class="price__field">
+                <span class="price__title">От</span>
                 <input class="price__input" type="number" name="price-from" value="0" min="0" max="10000" step="500">
-                <span class="price__title">от</span>
               </label>
+
               <label class="price__field">
+                <span class="price__title">До</span>
                 <input class="price__input" type="number" name="price-ещ" value="9000" min="0" max="10000" step="500">
-                <span class="price__title">до</span>
               </label>
 
               <div class="price__range-line range-line">
@@ -128,42 +137,40 @@
                 </button>
               </div>
             </div>
-
-            <div class="filter__buttons">
-              <button class="filter__button button">Применить</button>
-              <button class="filter__button button">Сбросить</button>
-            </div>
           </fieldset>
+
+          <div class="filter__buttons">
+            <button class="filter__button button">Применить</button>
+            <button class="filter__button button">Сбросить</button>
+          </div>
         </form>
       </section>
 
       <section class="catalog">
-        <h2 class="visually-hidden">Список найденных по запросу гостиниц</h2>
+        <h2 class="catalog__title section-title">Найдено гостиниц: <span class="hotel-search-number">38</span></h2>
 
-        <p class="catalog__title section-title">Найдено гостиниц: <span class="hotel-search-number">38</span></p>
-
-        <h3 class="visually-hidden">Список и отображение найденных по запросу гостиниц</h3>
+        <h3 class="visually-hidden">Сортировка и отображение найденных по запросу гостиниц</h3>
 
         <div class="catalog__options">
           <select class="catalog__sort catalog-sort">
-            <option value="cheaper" selected>Сначала дешевые</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="popular">Сначала популярные</option>
+            <option class="catalog-sort__option" value="cheaper" selected>Сначала дешевые</option>
+            <option class="catalog-sort__option" value="expensive">Сначала дорогие</option>
+            <option class="catalog-sort__option" value="popular">Сначала популярные</option>
           </select>
 
           <ul class="catalog__view catalog-view">
             <li class="catalog-view__item catalog-view__item--active">
-              <a href="#" class="catalog-view__link">
+              <a class="catalog-view__link" href="#">
                 <span class="visually-hidden">Отобразить результат в виде карточек</span>
               </a>
             </li>
             <li class="catalog-view__item">
-              <a href="#" class="catalog-view__link">
+              <a class="catalog-view__link" href="#">
                 <span class="visually-hidden">Отобразить результат в виде слайдов</span>
               </a>
             </li>
             <li class="catalog-view__item">
-              <a href="#" class="catalog-view__link">
+              <a class="catalog-view__link" href="#">
                 <span class="visually-hidden">Отобразить результат в виде списка</span>
               </a>
             </li>
@@ -176,7 +183,7 @@
           <li class="hotels-list__item">
             <img class="hotels-list__image" src="#" alt="Фото гостинницы Amara Resort & Spa">
 
-            <a href="#" class="hotels-list__name">
+            <a class="hotels-list__name" href="#">
               <h4>Amara Resort & Spa</h4>
             </a>
 
@@ -186,8 +193,8 @@
             </p>
 
             <div class="hotels-list__buttons hotels-list-buttons">
-              <a href="#" class="hotels-list-buttons__more button">подробнее</a>
-              <a href="#" class="hotels-list-buttons__favorite button">в избранное</a>
+              <a class="hotels-list-buttons__more button" href="#">Подробнее</a>
+              <a class="hotels-list-buttons__favorite button" href="#">В избранное</a>
             </div>
 
             <div class="hotels-list__ratings">
@@ -198,7 +205,7 @@
           <li class="hotels-list__item">
             <img class="hotels-list__image" src="#" alt="Фото гостинницы Villas at Poco Diablo">
 
-            <a href="#" class="hotels-list__name">
+            <a class="hotels-list__name" href="#">
               <h4>Villas at Poco Diablo</h4>
             </a>
 
@@ -208,8 +215,8 @@
             </p>
 
             <div class="hotels-list__buttons hotels-list-buttons">
-              <a href="#" class="hotels-list-buttons__more button">подробнее</a>
-              <a href="#" class="hotels-list-buttons__favorite button">в избранное</a>
+              <a class="hotels-list-buttons__more button" href="#">Подробнее</a>
+              <a class="hotels-list-buttons__favorite button" href="#">В избранное</a>
             </div>
 
             <div class="hotels-list__ratings">
@@ -220,7 +227,7 @@
           <li class="hotels-list__item">
             <img class="hotels-list__image" src="#" alt="Фото гостинницы Desert Quail Inn">
 
-            <a href="#" class="hotels-list__name">
+            <a class="hotels-list__name" href="#">
               <h4>Desert Quail Inn</h4>
             </a>
 
@@ -230,8 +237,8 @@
             </p>
 
             <div class="hotels-list__buttons hotels-list-buttons">
-              <a href="#" class="hotels-list-buttons__more button">подробнее</a>
-              <a href="#" class="hotels-list-buttons__favorite button">в избранное</a>
+              <a class="hotels-list-buttons__more button" href="#">Подробнее</a>
+              <a class="hotels-list-buttons__favorite button" href="#">В избранное</a>
             </div>
 
             <div class="hotels-list__ratings">
@@ -242,7 +249,7 @@
           <li class="hotels-list__item">
             <img class="hotels-list__image" src="#" alt="Фото гостинницы GreenTree Inn">
 
-            <a href="#" class="hotels-list__name">
+            <a class="hotels-list__name" href="#">
               <h4>GreenTree Inn</h4>
             </a>
 
@@ -252,8 +259,8 @@
             </p>
 
             <div class="hotels-list__buttons hotels-list-buttons">
-              <a href="#" class="hotels-list-buttons__more button">подробнее</a>
-              <a href="#" class="hotels-list-buttons__favorite button">в избранное</a>
+              <a class="hotels-list-buttons__more button" href="#">Подробнее</a>
+              <a class="hotels-list-buttons__favorite button" href="#">В избранное</a>
             </div>
 
             <div class="hotels-list__ratings">
@@ -277,9 +284,7 @@
       </section>
 
       <section class="subscribe">
-        <h2 class="visually-hidden">Подписка на рассылку</h2>
-
-        <p class="subscribe__title section-title">Подпишитесь на рассылку</p>
+        <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
         <p class="subscribe__text section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -314,7 +319,7 @@
       <a class="page-footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
       <a class="page-footer__academy" href="https://htmlacademy.ru/">
-        <img src="#" alt="Разработано HTML Academy">
+        <img class="page-footer__academy-logo" src="#" alt="Разработано HTML Academy">
       </a>
     </footer>
   </body>

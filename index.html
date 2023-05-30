@@ -7,33 +7,40 @@
   <body>
     <header class="page-header">
       <nav class="page-header__navigation navigation">
-        <a href="#" class="logo">
-          <img src="#" alt="Логотип города Седона">
+        <a class="logo" href="#">
+          <img class="logo__image" src="#" alt="Логотип города Седона">
         </a>
 
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link navigation__link--active">Главная</a>
+            <a class="navigation__link navigation__link--active" href="#">Главная</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">О седоне</a>
+            <a class="navigation__link" href="#">О Cедоне</a>
           </li>
           <li class="navigation__item">
-            <a href="catalog.html" class="navigation__link">Гостиницы</a>
+            <a class="navigation__link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
 
-        <div class="page-header__user-menu user-menu">
-          <button class="user-menu__icon user-menu__search">
-            <span class="visually-hidden">Поиск по сайту</span>
-          </button>
-          <a href="#" class="user-menu__icon user-menu__favorites favorites">
-            <span class="visually-hidden">Избранное</span>
-            <span class="favorites__counter">12</span>
-          </a>
-          <a href="#" class="user-menu__button button">Хочу сюда!</a>
-        </div>
+        <ul class="navigation__user-menu user-menu">
+          <li class="user-menu__item">
+            <a class="user-menu__link search" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link favorites" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="favorites__counter">12</span>
+            </a>
+          </li>
+        </ul>
+
+        <a class="page-header__button button" href="#">Хочу сюда!</a>
       </nav>
+
+      <img class="page-header__background" src="#" alt="Welcome to the gorgeous Sedona, becouse the Grand Canyon sucks!" width="1200" height="485">
     </header>
 
     <main class="page-main">
@@ -49,7 +56,7 @@
           <li class="advantages__item">
             <h3 class="advantages__title">Настоящий городок</h3>
             <p class="advantages__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img class="advantages__image" src="#" alt="Фото улиц и домов города Седона" >
+            <img class="advantages__image" src="#" alt="Фото улиц и домов города Седона">
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Небольшая площадь</h3>
@@ -94,18 +101,14 @@
       </section>
 
       <section class="search">
-        <h2 class="visually-hidden">Поиск гостинницы в городе Седона</h2>
-
-        <p class="search__title section-title">Заинтересовались?</p>
+        <h2 class="search__title section-title">Заинтересовались?</h2>
         <p class="search__text section-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-        <a href="catalog.html" class="search__button button">поиск гостинницы в седоне</a>
+        <a class="search__button button" href="catalog.html">Поиск гостиницы в седоне</a>
       </section>
 
       <section class="subscribe">
-        <h2 class="visually-hidden">Подписка на рассылку</h2>
-
-        <p class="subscribe__title section-title">Подпишитесь на рассылку</p>
+        <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
         <p class="subscribe__text section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -140,7 +143,7 @@
       <a class="page-footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
       <a class="page-footer__academy" href="https://htmlacademy.ru/">
-        <img src="#" alt="Разработано HTML Academy">
+        <img class="page-footer__academy-logo" src="#" alt="Разработано HTML Academy">
       </a>
     </footer>
   </body>
