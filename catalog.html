@@ -8,7 +8,7 @@
     <header class="page-header">
       <nav class="page-header__navigation navigation">
         <a class="logo" href="#">
-          <img class="logo__image" src="#" alt="Логотип города Седона">
+          <img class="logo__image" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
 
         <ul class="navigation__list">
@@ -25,19 +25,19 @@
 
         <ul class="navigation__user-menu user-menu">
           <li class="user-menu__item">
-            <a class="user-menu__link search" href="#">
+            <a class="user-menu__link search" aria-label="Поиск по сайту" href="#">
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
           </li>
           <li class="user-menu__item">
-            <a class="user-menu__link favorites" href="#">
+            <a class="user-menu__link favorites" aria-label="Перейти к списку избранного" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="favorites__counter">12</span>
             </a>
           </li>
         </ul>
 
-        <a class="page-header__button button" href="#">Хочу сюда!</a>
+        <a class="page-header__button button" aria-label="Перейти к каталогу гостиниц" href="catalog.html">Хочу сюда!</a>
       </nav>
     </header>
 
@@ -138,8 +138,8 @@
           </fieldset>
 
           <div class="filter__buttons">
-            <button class="filter__button button">Применить</button>
-            <button class="filter__button button">Сбросить</button>
+            <button class="filter__button button" aria-label="Применить указанные фильтры" type="submit">Применить</button>
+            <button class="filter__button button" aria-label="Сбросить указанные фильтры" type="reset">Сбросить</button>
           </div>
         </form>
       </section>
@@ -179,8 +179,8 @@
 
         <ul class="catalog__hotels-list hotels-list">
           <li class="hotels-list__item">
-            <a class="hetels-list__image" href="#">
-              <img src="#" alt="Фото гостинницы Amara Resort & Spa">
+            <a class="hotels-list__image" href="#">
+              <img src="images/hotel-1.jpg" width="300" height="212" alt="Фото гостинницы Amara Resort & Spa">
             </a>
 
             <a class="hotels-list__name" href="#">
@@ -203,8 +203,8 @@
           </li>
 
           <li class="hotels-list__item">
-            <a class="hetels-list__image" href="#">
-              <img src="#" alt="Фото гостиницы Villas at Poco Diablo">
+            <a class="hotels-list__image" href="#">
+              <img src="images/hotel-2.jpg" width="300" height="212" alt="Фото гостиницы Villas at Poco Diablo">
             </a>
 
             <a class="hotels-list__name" href="#">
@@ -227,8 +227,8 @@
           </li>
 
           <li class="hotels-list__item">
-            <a class="hetels-list__image" href="#">
-              <img src="#" alt="Фото гостинницы Desert Quail Inn">
+            <a class="hotels-list__image" href="#">
+              <img src="images/hotel-3.jpg" width="300" height="212" alt="Фото гостинницы Desert Quail Inn">
             </a>
 
             <a class="hotels-list__name" href="#">
@@ -251,8 +251,8 @@
           </li>
 
           <li class="hotels-list__item">
-            <a class="hetels-list__image" href="#">
-              <img src="#" alt="Фото гостинницы GreenTree Inn">
+            <a class="hotels-list__image" href="#">
+              <img src="images/hotel-4.jpg" width="300" height="212" alt="Фото гостинницы GreenTree Inn">
             </a>
 
             <a class="hotels-list__name" href="#">
@@ -279,12 +279,12 @@
           <h3 class="visually-hidden">Загрузить еще</h3>
 
           <ul class="pagination__list">
-            <li class="pagination__item"><a href="#" class="pagination__link pagination__link--active">1</a></li>
-            <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
-            <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
-            <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
-            <li class="pagination__item"><a href="#" class="pagination__link">...</a></li>
-            <li class="pagination__item"><a href="#" class="pagination__link">10</a></li>
+            <li class="pagination__item"><a href="#" aria-label="Перейти на страницу номер 1" class="pagination__link pagination__link--active">1</a></li>
+            <li class="pagination__item"><a href="#" aria-label="Перейти на страницу номер 2" class="pagination__link">2</a></li>
+            <li class="pagination__item"><a href="#" aria-label="Перейти на страницу номер 3" class="pagination__link">3</a></li>
+            <li class="pagination__item"><a href="#" aria-label="Перейти на страницу номер 4" class="pagination__link">4</a></li>
+            <li class="pagination__item"><a href="#" aria-label="Перейти на страницу номер " class="pagination__link">...</a></li>
+            <li class="pagination__item"><a href="#" aria-label="Перейти на страницу номер 10" class="pagination__link">10</a></li>
           </ul>
         </div>
       </section>
@@ -325,7 +325,7 @@
       <a class="page-footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
       <a class="page-footer__academy" href="https://htmlacademy.ru/">
-        <img class="page-footer__academy-logo" src="#" alt="Разработано HTML Academy">
+        <img class="page-footer__academy-logo" src="images/HTML-Academy.svg" width="115" height="33" alt="Разработано HTML Academy">
       </a>
     </footer>
   </body>
