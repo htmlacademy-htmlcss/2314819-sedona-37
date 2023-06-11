@@ -50,8 +50,10 @@
       <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Преимущества города Седона</h2>
 
-        <p class="advantages__title section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p class="advantages__description section-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <div class="advantages__block section-block">
+          <p class="advantages__title section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="advantages__description section-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
 
         <ol class="advantages__list">
           <li class="advantages__item advantages__item-large">
@@ -82,8 +84,10 @@
       <section class="services" data-test="advantages">
         <h2 class="visually-hidden">Услуги в городе Седона</h2>
 
-        <p class="services__title section-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-        <p class="services__description section-description">Опытный персонал и качественное обслуживание!</p>
+        <div class="services__block section-block">
+          <p class="services__title section-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+          <p class="services__description section-description">Опытный персонал и качественное обслуживание!</p>
+        </div>
 
         <ul class="services__list">
           <li class="services__item">
@@ -101,24 +105,25 @@
         </ul>
       </section>
 
-      <section class="search" data-test="search">
+      <section class="search section-block" data-test="search">
         <h2 class="search__title section-title">Заинтересовались?</h2>
-        <p class="search__text section-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p class="search__text section-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
         <a class="search__button button" href="catalog.html">Поиск гостиниц в седоне</a>
       </section>
 
       <section class="subscribe">
-        <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe__text section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-
-        <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="subscribe__field field">
-            <span class="visually-hidden">Ваш e-mail</span>
-            <input class="field__input" type="email" name="email" placeholder="Ваш e-mail" required>
-          </label>
-          <button class="subscribe__button button button-secondary" type="submit">Подписаться</button>
-        </form>
+        <div class="subscribe__block section-block">
+          <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
+          <p class="subscribe__text section-description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
+          <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="subscribe__field field">
+              <span class="visually-hidden">Ваш e-mail</span>
+              <input class="field__input" type="email" name="email" placeholder="Ваш e-mail" required>
+            </label>
+            <button class="subscribe__button button button-secondary" type="submit">Подписаться</button>
+          </form>
+        </div>
       </section>
     </main>
 
