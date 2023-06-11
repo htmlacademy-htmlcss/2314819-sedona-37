@@ -116,14 +116,32 @@
   position: relative;
 }
 
-.left-side {
-  position: absolute;
-  bottom: 0;
+.page-header__navigation {
 }
 
-.right-side {
+.page-header__button {
+  margin-left: 20px;
+}
+
+.page-header__background {
+}
+.page-header__background::before {
+}
+/* ----- /PAGE-HEADER ----- */
+
+/* ----- Triangle ----- */
+
+.triangle {
+}
+
+.triangle-left-side {
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
+}
+
+.triangle-right-side {
+  position: absolute;
+  bottom: 4px;
   right: 0;
 }
 
@@ -137,11 +155,11 @@
 .triangle-bottom-left::before {
     content: "";
     position: absolute;
-    left: 300px;
+    left: 250px;
     width: 0;
     height: 0;
     border-bottom: 57px solid #ffffff;
-    border-right: 300px solid transparent;
+    border-right: 350px solid transparent;
 }
 
 .triangle-bottom-right {
@@ -158,26 +176,11 @@
     width: 0;
     height: 0;
     border-bottom: 57px solid #ffffff;
-    border-left: 300px solid transparent;
+    border-left: 350px solid transparent;
 }
 
+/* ----- /Triangle ----- */
 
-
-
-
-
-
-
-.page-header__navigation {
-}
-.page-header__button {
-  margin-left: 20px;
-}
-.page-header__background {
-}
-.page-header__background::before {
-}
-/* ----- /PAGE-HEADER ----- */
 
 /* ----- PAGE-MAIN ----- */
 .page-main {
