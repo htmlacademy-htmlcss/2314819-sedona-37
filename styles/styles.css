@@ -113,7 +113,61 @@
 
 /* ----- PAGE-HEADER ----- */
 .page-header {
+  position: relative;
 }
+
+.left-side {
+  position: absolute;
+  bottom: 0;
+}
+
+.right-side {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.triangle-bottom-left {
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #ffffff;
+    border-right: 600px solid transparent;
+}
+
+.triangle-bottom-left::before {
+    content: "";
+    position: absolute;
+    left: 300px;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #ffffff;
+    border-right: 300px solid transparent;
+}
+
+.triangle-bottom-right {
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #ffffff;
+    border-left: 600px solid transparent;
+}
+
+.triangle-bottom-right::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #ffffff;
+    border-left: 300px solid transparent;
+}
+
+
+
+
+
+
+
+
 .page-header__navigation {
 }
 .page-header__button {
@@ -204,6 +258,7 @@
   font-size: 10px;
 }
 /* ----- /FAVORITES ----- */
+
 
 
 /* ----- ADVANTAGES ----- */
