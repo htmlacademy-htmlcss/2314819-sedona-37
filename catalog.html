@@ -43,101 +43,103 @@
     </header>
 
     <main class="page-main" data-test="main">
-      <div class="catalog-header">
-        <h1 class="page-main__title">Гостиницы Седоны</h1>
-        <ol class="path-navigation">
-          <li class="path-navigation__item">
-            <a class="path-navigation__link" href="index.html">
-              <span class="visually-hidden">Переход на главную страницу сайта</span>
-            </a>
-          </li>
-          <li class="path-navigation__item">
-            <a class="path-navigation__link" href="catalog.html">
-              Гостиницы
-              <span class="visually-hidden">Переход на страницу гостиниц</span>
-            </a>
-          </li>
-        </ol>
-        <section class="filter" data-test="filter">
-          <h2 class="visually-hidden">Фильтр списка гостиниц</h2>
-          <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="filter__fieldset">
-              <legend class="filter__title">Инфраструктура:</legend>
-              <ul class="filter__list">
-                <li class="filter__item">
-                  <label class="sort">
-                    <input class="sort__input" type="checkbox" name="infrastructure" value="swiming-pool" checked>
-                    <span class="sort__name">Бассейн</span>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="sort">
-                    <input class="sort__input" type="checkbox" name="infrastructure" value="parking" checked>
-                    <span class="sort__name">Парковка</span>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="sort">
-                    <input class="sort__input" type="checkbox" name="infrastructure" value="wi-fi">
-                    <span class="sort__name">Wi-Fi</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__title">Тип жилья:</legend>
-              <ul class="filter__list">
-                <li class="filter__item">
-                  <label class="sort">
-                    <input class="sort__input" type="radio" name="dwelling" value="hotel" checked>
-                    <span class="sort__name">Гостинница</span>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="sort">
-                    <input class="sort__input" type="radio" name="dwelling" value="motel">
-                    <span class="sort__name">Мотель</span>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="sort">
-                    <input class="sort__input" type="radio" name="dwelling" value="apartments">
-                    <span class="sort__name">Апартаменты</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__title">Стоимость, <span class="ruble">&#8381;</span></legend>
+      <section class="catalog-header">
+        <div class="catalog-header__content">
+          <h1 class="page-main__title">Гостиницы Седоны</h1>
+          <ol class="path-navigation">
+            <li class="path-navigation__item">
+              <a class="path-navigation__link" href="index.html">
+                <span class="visually-hidden">Переход на главную страницу сайта</span>
+              </a>
+            </li>
+            <li class="path-navigation__item">
+              <a class="path-navigation__link" href="catalog.html">
+                Гостиницы
+                <span class="visually-hidden">Переход на страницу гостиниц</span>
+              </a>
+            </li>
+          </ol>
+          <section class="filter" data-test="filter">
+            <h2 class="visually-hidden">Фильтр списка гостиниц</h2>
+            <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="filter__fieldset">
+                <legend class="filter__title">Инфраструктура:</legend>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <label class="sort">
+                      <input class="sort__input" type="checkbox" name="infrastructure" value="swiming-pool" checked>
+                      <span class="sort__name">Бассейн</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="sort">
+                      <input class="sort__input" type="checkbox" name="infrastructure" value="parking" checked>
+                      <span class="sort__name">Парковка</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="sort">
+                      <input class="sort__input" type="checkbox" name="infrastructure" value="wi-fi">
+                      <span class="sort__name">Wi-Fi</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
 
-              <div class="filter__price price">
-                <label class="price__field">
-                  <span class="price__title">от</span>
-                  <input class="price__input" type="number" name="price-from" value="0" min="0" max="10000" step="500">
-                </label>
+              <fieldset class="filter__fieldset">
+                <legend class="filter__title">Тип жилья:</legend>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <label class="sort">
+                      <input class="sort__input" type="radio" name="dwelling" value="hotel" checked>
+                      <span class="sort__name">Гостинница</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="sort">
+                      <input class="sort__input" type="radio" name="dwelling" value="motel">
+                      <span class="sort__name">Мотель</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="sort">
+                      <input class="sort__input" type="radio" name="dwelling" value="apartments">
+                      <span class="sort__name">Апартаменты</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
 
-                <label class="price__field">
-                  <span class="price__title">до</span>
-                  <input class="price__input" type="number" name="price-ещ" value="9000" min="0" max="10000" step="500">
-                </label>
-
-                <div class="price__range-line range-line">
-                  <button class="range-line__toddler">
-                    <span class="visually-hidden">Ползунок выбора начальной цены</span>
-                  </button>
-                  <button class="range-line__toddler">
-                    <span class="visually-hidden">Ползунок выбора конечной цены</span>
-                  </button>
+              <fieldset class="filter__fieldset">
+                <legend class="filter__title">Стоимость, <span class="ruble">&#8381;</span></legend>
+                <div class="filter__price price">
+                  <label class="price__field">
+                    <span class="price__title">от</span>
+                    <input class="price__input" type="number" name="price-from" value="0" min="0" max="10000" step="500">
+                  </label>
+                  <label class="price__field">
+                    <span class="price__title">до</span>
+                    <input class="price__input" type="number" name="price-ещ" value="9000" min="0" max="10000" step="500">
+                  </label>
+                  <div class="price__range-line range-line">
+                    <button class="range-line__toddler">
+                      <span class="visually-hidden">Ползунок выбора начальной цены</span>
+                    </button>
+                    <button class="range-line__toddler">
+                      <span class="visually-hidden">Ползунок выбора конечной цены</span>
+                    </button>
+                  </div>
                 </div>
+              </fieldset>
+
+              <div class="filter__buttons">
+                <button class="filter__button button button-secondary" aria-label="Применить указанные фильтры" type="submit">Применить</button>
+                <button class="filter__button button-reset button" aria-label="Сбросить указанные фильтры" type="reset">Сбросить</button>
               </div>
-            </fieldset>
-            <div class="filter__buttons">
-              <button class="filter__button button button-secondary" aria-label="Применить указанные фильтры" type="submit">Применить</button>
-              <button class="filter__button button-reset button" aria-label="Сбросить указанные фильтры" type="reset">Сбросить</button>
-            </div>
-          </form>
-        </section>
-      </div>
+            </form>
+          </section>
+        </div>
+      </section>
 
       <section class="catalog" data-test="catalog">
         <h2 class="catalog__title section-title">Найдено гостиниц: <span class="hotel-search-number">38</span></h2>
@@ -297,16 +299,17 @@
       </section>
 
       <section class="subscribe">
-        <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe__text section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-
-        <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="subscribe__field field">
-            <span class="visually-hidden">Ваш e-mail</span>
-            <input class="field__input" type="email" name="email" placeholder="Ваш e-mail" required>
-          </label>
-          <button class="subscribe__button button button-secondary" type="submit">Подписаться</button>
-        </form>
+        <div class="subscribe__block section-block">
+          <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
+          <p class="subscribe__text section-description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
+          <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="subscribe__field field">
+              <span class="visually-hidden">Ваш e-mail</span>
+              <input class="field__input" type="email" name="email" placeholder="Ваш e-mail" required>
+            </label>
+            <button class="subscribe__button button button-secondary" type="submit">Подписаться</button>
+          </form>
+        </div>
       </section>
     </main>
 
