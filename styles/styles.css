@@ -33,6 +33,7 @@
 
 .page-body {
   background-color: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 
   width: 1200px;
   margin: 0 auto;
@@ -40,6 +41,9 @@
 
   display: flex;
   flex-direction: column;
+}
+
+.container {
 }
 
 .visually-hidden {
@@ -101,7 +105,7 @@
 .section-description {
   font-size: 22px;
   text-align: center;
-
+  line-height: 26px;
   margin: 0;
 }
 
@@ -554,7 +558,10 @@
 
 
 /* ----- CATALOG ----- */
+
 .catalog {
+  margin: 50px 0  60px 0;
+  padding: 0 70px;
 }
 
 .catalog-header {
@@ -571,31 +578,66 @@
 
 .catalog__title {
   text-align: left;
+  margin: 0 auto 0 0;
 }
 
 .catalog__options {
-}
-.catalog__sort {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .catalog-sort {
+  background-color: #ffffff;
   font-size: 18px;
+  padding: 14px 20px;
+  line-height: 117%;
 }
 
 .catalog-sort__option {
+  font-size: 18px;
+  padding: 14px 20px;
+  line-height: 117%;
 }
+
 .catalog__view {
+  margin: 0 0 0 70px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
-.catalog-view {
-}
+
 .catalog-view__item {
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
+
+.catalog-view__item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .catalog-view__item--active {
+  border: 2px solid #000000;
 }
 .catalog-view__link {
 }
 .catalog__hotels-list {
 }
+
+.catalog-subscribe {
+  background-image: none;
+  background-color: inherit;
+  color: inherit;
+}
+
+.catalog-subscribe-title {
+  color: inherit;
+}
+
 .hotel-search-number {
 }
 /* ----- /CATALOG ----- */
@@ -640,6 +682,9 @@
 
 /* ----- HOTELS-LIST ----- */
 .hotels-list {
+  margin: 0 0 40px 0;
+  padding: 0;
+  list-style-type: none;
 }
 .hotels-list__item {
 }
@@ -686,11 +731,31 @@
 .pagination {
 }
 .pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
+
 .pagination__item {
+  box-sizing: border-box;
+  max-width: 60px;
+}
+
+.pagination__item:not(:last-child) {
+  margin-right: 8px;
 }
 .pagination__link {
+  color: #ffffff;
+
+
+  display: block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 700;
   font-size: 20px;
+  line-height: 180%;
 }
 
 .pagination__link--active {
