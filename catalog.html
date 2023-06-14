@@ -5,28 +5,28 @@
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body class="page-body">
-    <header class="page-header" data-test="header">
+  <body class="page-body catalog-body">
+    <header class="page-header container" data-test="header">
       <nav class="page-header__navigation navigation">
-        <a class="logo" href="index.html">
+        <a class="logo" href="#" aria-current="page">
           <img class="logo__image" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
 
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link" href="index.html">Главная</a>
+            <a class="navigation__link navigation__link--active" href="index.html">Главная</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">О Cедоне</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--active" href="catalog.html" aria-current="page">Гостиницы</a>
+            <a class="navigation__link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
 
         <ul class="navigation__user-menu user-menu">
           <li class="user-menu__item">
-            <a class="user-menu__link search" href="#">
+            <a class="user-menu__link menu-search" href="#">
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
           </li>
@@ -142,11 +142,12 @@
       </section>
 
       <section class="catalog" data-test="catalog">
-        <h2 class="catalog__title section-title">Найдено гостиниц: <span class="hotel-search-number">38</span></h2>
-
-        <h3 class="visually-hidden">Сортировка и отображение найденных по запросу гостиниц</h3>
 
         <div class="catalog__options">
+          <h2 class="catalog__title section-title">Найдено гостиниц: <span class="hotel-search-number">38</span></h2>
+
+          <h3 class="visually-hidden">Сортировка и отображение найденных по запросу гостиниц</h3>
+
           <select class="catalog__sort catalog-sort">
             <option class="catalog-sort__option" value="cheaper" selected>Сначала дешевые</option>
             <option class="catalog-sort__option" value="expensive">Сначала дорогие</option>
@@ -298,9 +299,9 @@
         </div>
       </section>
 
-      <section class="subscribe">
+      <section class="subscribe catalog-subscribe">
         <div class="subscribe__block section-block">
-          <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
+          <h2 class="subscribe__title catalog-subscribe-title section-title">Подпишитесь на рассылку</h2>
           <p class="subscribe__text section-description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="subscribe__field field">
