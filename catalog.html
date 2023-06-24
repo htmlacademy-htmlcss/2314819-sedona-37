@@ -43,10 +43,14 @@
       <section class="catalog-header">
         <div class="catalog-header__content">
           <h1 class="title page-main__title">Гостиницы Седоны</h1>
-          <ol class="path-navigation">
+          <ol class="list path-navigation">
             <li class="path-navigation__item">
               <a class="path-navigation__link" href="index.html">
                 <span class="visually-hidden">Переход на главную страницу сайта</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" aria-hidden="true" focusable="false">
+                  <path fill="#fff" d="m6.37.5-6 5.8v6.2h12V6.3l-6-5.8Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/>
+                  <path fill="#fff" d="M4.37 10.5h1V8h2v2.5h1V7h-4v3.5Z"/>
+                </svg>
               </a>
             </li>
             <li class="path-navigation__item">
@@ -64,19 +68,22 @@
                 <ul class="list filter__list">
                   <li class="filter__item">
                     <label class="sort">
-                      <input class="sort__input" type="checkbox" name="infrastructure" value="swiming-pool" checked>
+                      <input class="sort__input visually-hidden" type="checkbox" name="infrastructure" value="swiming-pool" checked>
+                      <span class="sort__checkbox"></span>
                       <span class="sort__name">Бассейн</span>
                     </label>
                   </li>
                   <li class="filter__item">
                     <label class="sort">
-                      <input class="sort__input" type="checkbox" name="infrastructure" value="parking" checked>
+                      <input class="sort__input visually-hidden" type="checkbox" name="infrastructure" value="parking" checked>
+                      <span class="sort__checkbox"></span>
                       <span class="sort__name">Парковка</span>
                     </label>
                   </li>
                   <li class="filter__item">
                     <label class="sort">
-                      <input class="sort__input" type="checkbox" name="infrastructure" value="wi-fi">
+                      <input class="sort__input visually-hidden" type="checkbox" name="infrastructure" value="wi-fi">
+                      <span class="sort__checkbox"></span>
                       <span class="sort__name">Wi-Fi</span>
                     </label>
                   </li>
@@ -88,19 +95,22 @@
                 <ul class="list filter__list">
                   <li class="filter__item">
                     <label class="sort">
-                      <input class="sort__input" type="radio" name="dwelling" value="hotel" checked>
-                      <span class="sort__name">Гостинница</span>
+                      <input class="sort__input visually-hidden" type="radio" name="dwelling" value="hotel" checked>
+                      <span class="sort__radio"></span>
+                      <span class="sort__name">Гостиница</span>
                     </label>
                   </li>
                   <li class="filter__item">
                     <label class="sort">
-                      <input class="sort__input" type="radio" name="dwelling" value="motel">
+                      <input class="sort__input visually-hidden" type="radio" name="dwelling" value="motel">
+                      <span class="sort__radio"></span>
                       <span class="sort__name">Мотель</span>
                     </label>
                   </li>
                   <li class="filter__item">
                     <label class="sort">
-                      <input class="sort__input" type="radio" name="dwelling" value="apartments">
+                      <input class="sort__input visually-hidden" type="radio" name="dwelling" value="apartments">
+                      <span class="sort__radio"></span>
                       <span class="sort__name">Апартаменты</span>
                     </label>
                   </li>
@@ -149,11 +159,13 @@
 
           <h3 class="visually-hidden">Сортировка и отображение найденных по запросу гостиниц</h3>
 
-          <select class="catalog__sort catalog-sort">
-            <option class="catalog-sort__option" value="cheaper" selected>Сначала дешевые</option>
-            <option class="catalog-sort__option" value="expensive">Сначала дорогие</option>
-            <option class="catalog-sort__option" value="popular">Сначала популярные</option>
-          </select>
+          <div class="catalog-sort-wrapper">
+            <select class="catalog__sort catalog-sort">
+              <option class="catalog-sort__option" value="cheaper" selected>Сначала дешевые</option>
+              <option class="catalog-sort__option" value="expensive">Сначала дорогие</option>
+              <option class="catalog-sort__option" value="popular">Сначала популярные</option>
+            </select>
+          </div>
 
           <ul class="list catalog__view catalog-view">
             <li class="catalog-view__item catalog-view__item--active view-card">
@@ -197,6 +209,7 @@
             </div>
 
             <div class="hotels-list__ratings">
+              <img src="../2314819-sedona-37/images/4-stars.png" alt="четыре звезды из пяти" class="hotels-list__stars">
               <p class="paragraph hotels-list__rating">Рейтинг: 8,5</p>
             </div>
           </li>
@@ -221,6 +234,7 @@
             </div>
 
             <div class="hotels-list__ratings">
+              <img src="../2314819-sedona-37/images/4-stars.png" alt="четыре звезды из пяти" class="hotels-list__stars">
               <p class="paragraph hotels-list__rating">Рейтинг: 9,2</p>
             </div>
           </li>
@@ -245,6 +259,7 @@
             </div>
 
             <div class="hotels-list__ratings">
+              <img src="../2314819-sedona-37/images/3-stars.png" alt="три звезды из пяти" class="hotels-list__stars">
               <p class="paragraph hotels-list__rating">Рейтинг: 6,9</p>
             </div>
           </li>
@@ -269,6 +284,7 @@
             </div>
 
             <div class="hotels-list__ratings">
+              <img src="../2314819-sedona-37/images/2-stars.png" alt="две звезды из пяти" class="hotels-list__stars">
               <p class="paragraph hotels-list__rating">Рейтинг: 5,0</p>
             </div>
           </li>
