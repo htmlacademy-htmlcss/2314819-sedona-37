@@ -69,32 +69,32 @@
           <li class="advantages__item advantages-item advantages__item-large">
             <div class="advantages-item__description advantages-item__description--large">
               <h3 class="title advantages__title advantages__title--large card-title">Настоящий городок</h3>
-              <p class="paragraph advantages__text card__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <p class="paragraph advantages__text card-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <img class="advantages__image" src="images/photo-1.jpg" width="800" height="385" alt="Фото улиц и домов города Седона">
           </li>
           <li class="advantages__item advantages-item">
             <div class="advantages-item__description">
               <h3 class="title advantages__title card-title">Небольшая<br>площадь</h3>
-              <p class="paragraph advantages__text card__text">Все достопримечательности находятся очень близко</p>
+              <p class="paragraph advantages__text card-text">Все достопримечательности находятся очень близко</p>
             </div>
           </li>
           <li class="advantages__item advantages-item">
             <div class="advantages-item__description">
               <h3 class="title advantages__title card-title">Красивая<br>дорога</h3>
-              <p class="paragraph advantages__text card__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="paragraph advantages__text card-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
           </li>
           <li class="advantages__item advantages-item">
             <div class="advantages-item__description">
               <h3 class="title advantages__title card-title">Мало<br>туристов</h3>
-              <p class="paragraph advantages__text card__text">Большинство едет в Гранд Каньон и толпится там</p>
+              <p class="paragraph advantages__text card-text">Большинство едет в Гранд Каньон и толпится там</p>
             </div>
           </li>
           <li class="advantages__item advantages-item advantages__item-large">
             <div class="advantages-item__description advantages-item__description--large">
               <h3 class="title advantages__title advantages__title--large  card-title">Там есть мост&nbsp;дьявола</h3>
-              <p class="paragraph advantages__text card__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <p class="paragraph advantages__text card-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
             <img class="advantages__image" src="images/photo-2.jpg" width="800" height="385" alt="Фото каменного моста дьявола в пустыне города Седона" >
           </li>
@@ -181,5 +181,69 @@
         </svg>
       </a>
     </footer>
+
+    <section class="modal">
+      <div class="modal__content">
+        <h2 class="modal__title section-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal__close-button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+        <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="post" >
+          <div class="modal-form__field field-date">
+            <label class="modal-form__title" for="date-in">Дата Заезда:</label>
+            <input class="modal-form__input modal-form__input-date" type="text" name="date-in" id="date-in" placeholder="Укажите дату заезда" value="27 апреля 2020">
+            <span class="modal-form__message modal-form__message--error">Мы не можем отправить вас в прошлое.</span>
+          </div>
+
+          <div class="modal-form__field field-date">
+            <label class="modal-form__title" for="date-out">Дата Выезда:</label>
+            <input class="modal-form__input modal-form__input-date" type="text" name="date-out" id="date-out" placeholder="Укажите дату выезда" value="1 сентября 2023">
+            <span class="modal-form__message">На эти даты есть свободные номера. Пока есть.</span>
+          </div>
+
+          <div class="modal-form__container">
+            <div class="modal-form__field field-counters">
+              <label class="modal-form__title field-counters__title" for="adults">Взрослые:</label>
+              <div class="field-counter">
+                <button class="field-counter__button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество взрослых</span>
+                </button>
+                <input class="field-counter__input modal-form__input" type="number" name="kids-counter" id="adults" placeholder="0" value="2" min="1" step="1">
+                <button class="field-counter__button button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество взрослых</span>
+                </button>
+              </div>
+            </div>
+            <div class="modal-form__field field-counters field-counters--info">
+              <span class="field-counters-title">
+                <label class="modal-form__title field-counters__title" for="kids">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip__toggle" type="button" tabindex="-1">
+                    <svg class="tooltip__icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <span class="tooltip__text">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+              </span>
+              <div class="field-counter">
+                <button class="field-counter__button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество детей</span>
+                </button>
+                <input class="field-counter__input modal-form__input" type="number" name="kids-counter" id="kids" placeholder="0" value="2" min="1" step="1">
+                <button class="field-counter__button button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество детей</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="modal-form__button button-secondary button" type="submit">Найти</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
