@@ -3,31 +3,32 @@
 const modalOpenButtons = document.querySelectorAll('.modal-open-button');
 const modalCloseButton = document.querySelector('.modal__close-button');
 const modalWindow = document.querySelector('.modal');
-const modalContainer = document.querySelector('.modal__content');
 
 // Открыть модальное окно
 
-modalOpenButtons.forEach(e => {
-  e.addEventListener('click', () => modalWindow.style.display = "flex")
-})
+modalOpenButtons.forEach(e => e.addEventListener('click', () => {
+    modalWindow.classList.add('modal--active');
+  }))
 
 // Кнопка "закрыть"
 
 modalCloseButton.addEventListener('click', () => {
-  modalWindow.style.display = "none";
+  modalWindow.classList.remove('modal--active');
 })
 
 // Клавиатура "ESC"
 
 document.addEventListener('keydown', e => {
-	if( e.key === "Escape" ) modalWindow.style.display = 'none';
+	if( e.key === "Escape" ) {
+    modalWindow.classList.remove('modal--active');
+  }
 })
 
 // Клик за пределами модального окна
 
 modalWindow.addEventListener('click', e => {
   if (e.target == modalWindow) {
-    modalWindow.style.display = 'none';
+    modalWindow.classList.remove('modal--active');
   }
 })
 
