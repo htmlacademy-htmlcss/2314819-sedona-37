@@ -689,15 +689,15 @@ img {
   padding: 10px 0;
 }
 
-.social__link:hover svg path {
+.social__link:hover path {
   fill: #68A2CA;
 }
 
-.social__link:focus-visible svg path {
+.social__link:focus-visible path {
   fill: #68A2CA;
 }
 
-.social__link:active svg path {
+.social__link:active path {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -758,12 +758,12 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.path-navigation__link:hover svg path,
-.path-navigation__link:focus svg path {
+.path-navigation__link:hover path,
+.path-navigation__link:focus path {
   fill: rgba(255, 255, 255, 0.6);
 }
 
-.path-navigation__link:active svg path{
+.path-navigation__link:active path{
   fill: rgba(255, 255, 255, 0.3);
 }
 
