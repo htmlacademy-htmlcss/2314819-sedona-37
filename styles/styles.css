@@ -127,15 +127,15 @@ img {
 }
 
 .button-reset:hover {
-  color: rgba(255, 255, 255, 0.60)
+  color: rgba(255, 255, 255, 0.60);
 }
 
 .button-reset:active {
-  color: rgba(255, 255, 255, 0.30)
+  color: rgba(255, 255, 255, 0.30);
 }
 
 .button-reset:focus-visible {
-  outline: 3px solid #83B3D3;;
+  outline: 3px solid #83B3D3;
 }
 
 /* ----- /buttons ----- */
@@ -435,7 +435,7 @@ img {
 /* ----- ADVANTAGES ----- */
 
 .advantages__block {
-  width: 651px;
+  width: 655px;
   padding: 64px 0 68px;
   margin-bottom: 21px;
 }
@@ -475,7 +475,7 @@ img {
 
 .advantages-item__description {
   text-align: center;
-  padding: 112px 85px;
+  padding: 114px 85px 111px 85px;
 }
 
 .advantages-item__description--large {
@@ -539,6 +539,10 @@ img {
   padding: 95px 0;
 }
 
+.search__title {
+  margin-bottom: 20px;
+}
+
 .search__text {
   margin-bottom: 54px;
   line-height: 26px;
@@ -566,8 +570,8 @@ img {
 }
 
 .subscribe-primary {
-  padding-top: 94px;
-  padding-bottom: 104px;
+  padding-top: 96px;
+  padding-bottom: 103px;
 }
 
 .subscribe__block {
@@ -578,7 +582,7 @@ img {
 
 .subscribe__title {
   color: #ffffff;
-  margin-bottom: 24px;
+  margin-bottom: 21px;
 }
 
 .subscribe__text {
@@ -597,7 +601,7 @@ img {
 .subscribe__button {
   font-size: 20px;
   border-radius: 0 4px 4px 0;
-  padding: 8px 50px;
+  padding: 13px 50px;
 }
 /* ----- /SUBSCRIBE ----- */
 
@@ -627,7 +631,7 @@ img {
 
 /* ----- PAGE-FOOTER ----- */
 .page-footer {
-  padding: 40px 70px 30px 70px;
+  padding: 45px 70px 30px 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -814,7 +818,7 @@ img {
 }
 
 .filter__item:not(:last-child) {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .filter__input {
@@ -906,7 +910,7 @@ img {
 }
 
 .catalog-header__content {
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 67px 70px;
 }
 
 .catalog__title {
@@ -1006,12 +1010,12 @@ img {
   background-image: none;
   background-color: inherit;
   color: inherit;
-  padding-bottom: 105px;
+  padding-bottom: 102px;
 }
 
 .catalog-subscribe-title {
   color: inherit;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 /* ----- /CATALOG ----- */
@@ -1131,7 +1135,7 @@ img {
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   padding: 20px;
-  width: 341px;
+  width: 342px;
 
   display: flex;
   flex-direction: column;
@@ -1160,7 +1164,7 @@ img {
 
   transition: color 0.1s ease;
 
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 
 .hotels-list__name:hover {
@@ -1174,6 +1178,10 @@ img {
   line-height: 21px;
 
   margin-bottom: 16px;
+}
+
+.hotels-list-description__price {
+  text-align: right;
 }
 
 .hotels-list-buttons {
@@ -1326,6 +1334,10 @@ img {
   transition: background-color 0.1s ease;
 }
 
+.modal__close-button {
+  appearance: none;
+}
+
 .modal__close-button::before {
   content: "";
   position: absolute;
@@ -1446,13 +1458,18 @@ img {
   width: 30px;
   height: 34px;
   border: none;
-
   opacity: 0.2;
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
 
   transition: opacity 0.1s;
+}
+
+.field-counter__button::-webkit-outer-spin-button,
+.field-counter__button::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .field-counter__button:disabled {
@@ -1492,6 +1509,11 @@ img {
   border-radius: 4px;
 
   background-color: #F2F2F2;
+}
+
+.field-counter__input {
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .field-counter__input::-webkit-outer-spin-button,
