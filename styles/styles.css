@@ -40,7 +40,7 @@ img {
 
   height: 100%;
 
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
 }
 
@@ -123,6 +123,7 @@ img {
 
 .button-reset {
   background-color: transparent;
+  transition: color 0.1s ease;
 }
 
 .button-reset:hover {
@@ -189,8 +190,6 @@ img {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-
-  position: relative;
 }
 
 .card-text {
@@ -198,21 +197,20 @@ img {
 }
 
 .card-title:not(.services__title) {
-  margin-bottom: 65px;
+  margin-bottom: 31px;
 }
 
-.card-title:not(.services__title)::before {
+.card-title:not(.services__title)::after {
   content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 87px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 31px;
   width: 60px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.card-title:not(.advantages__title--large)::before {
+.card-title:not(.advantages__title--large)::after {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -339,6 +337,17 @@ img {
   display: block;
   padding: 20px 16px;
   text-decoration: none;
+
+  transition: color 0.1s ease;
+}
+
+.navigation__link:hover:not(.navigation__link--active) {
+  color: #756257;
+}
+
+.navigation__link:focus-visible {
+  outline: 2px solid #756257;
+  outline-offset: -2px;
 }
 
 .navigation__link--active {
@@ -382,6 +391,11 @@ img {
   fill: #000000;
   background-repeat: no-repeat;
   background-position: center center;
+  transition: transform 0.1s ease;
+}
+
+.user-menu__link:hover {
+  transform: scale(1.1);
 }
 /* ----- /USER-MENU ----- */
 
@@ -389,6 +403,7 @@ img {
 /* ----- MENU-SEARCH ----- */
 .menu-search {
   background-image: url('../images/icons/search.svg');
+  margin-right: 2px;
 }
 /* ----- /MENU-SEARCH ----- */
 
@@ -421,7 +436,7 @@ img {
 
 .advantages__block {
   width: 651px;
-  padding: 66px 0;
+  padding: 64px 0 68px;
   margin-bottom: 21px;
 }
 
@@ -475,7 +490,7 @@ img {
 
 .services__block {
   width: 505px;
-  padding: 62px 0;
+  padding: 63px 0;
 }
 
 .services__item {
@@ -594,7 +609,7 @@ img {
 
 .field__input {
   width: 100%;
-  padding: 13px 20px;
+  padding: 12px 20px;
   background-color: #F2F2F2;
   border: 2px solid transparent;
   font-family: inherit;
@@ -623,7 +638,7 @@ img {
 
   font-size: 40px;
   text-decoration: none;
-  outline: none;
+  margin-top: -3px;
 
   transition: color 0.1s ease-in;
 }
@@ -640,16 +655,12 @@ img {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.page-footer__academy {
-  outline: none;
-}
-
-.page-footer__academy:hover svg path,
-.page-footer__academy:focus-visible svg path  {
+.page-footer__academy:hover path,
+.page-footer__academy:focus-visible path  {
   fill: #756157;
 }
 
-.page-footer__academy:active svg path {
+.page-footer__academy:active path {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -672,7 +683,6 @@ img {
   align-items: center;
   justify-content: center;
   padding: 10px 0;
-  outline: none;
 }
 
 .social__link:hover svg path {
@@ -728,13 +738,16 @@ img {
 .path-navigation__link {
   color: #ffffff;
   text-decoration: none;
-  outline: none;
   transition: color 0.1s ease;
 }
 
 .path-navigation__link:hover,
 .path-navigation__link:focus {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.path-navigation__link:focus-visible {
+  outline: 1px solid #83B3D3;
 }
 
 .path-navigation__link:active {
@@ -750,15 +763,13 @@ img {
   fill: rgba(255, 255, 255, 0.3);
 }
 
-
-
 /* ----- /PATH-NAVIGATION ----- */
 
 
 /* ----- FILTER ----- */
 
 .filter__form {
-  margin-top: 40px;
+  margin-top: 41px;
   display: flex;
   min-height: 160px;
 }
@@ -796,8 +807,72 @@ img {
   margin-bottom: 32px;
 }
 
+.filter__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .filter__item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 17px;
+}
+
+.filter__input {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.filter__input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filter__input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  background-color: #3f5e72;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter__input:active,
+.filter__input:active + .filter__label {
+  opacity: 0.3;
+}
+
+.filter__input:hover,
+.filter__input:hover + .filter__label {
+  opacity: 0.6;
+}
+
+.filter__input[type="checkbox"]:checked {
+  background-image: url('../images/icons/check.svg');
+  background-repeat: no-repeat;
+  background-position: left 4px top 6px;
+  background-size: 13px 11px;
+}
+
+
+.filter__input:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+
+.filter__label {
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
 }
 
 .filter__buttons {
@@ -831,7 +906,7 @@ img {
 }
 
 .catalog-header__content {
-  padding: 35px 70px 67px 70px;
+  padding: 35px 70px 70px 70px;
 }
 
 .catalog__title {
@@ -843,7 +918,7 @@ img {
 .catalog__options {
   display: flex;
   align-items: center;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 .catalog-sort-wrapper {
@@ -936,84 +1011,10 @@ img {
 
 .catalog-subscribe-title {
   color: inherit;
-  margin-bottom: 19px;
+  margin-bottom: 23px;
 }
 
 /* ----- /CATALOG ----- */
-
-
-/* ----- SORT----- */
-.sort {
-  position: relative;
-  padding-left: 36px;
-}
-
-.sort__name {
-  transition: all 0.1s ease;
-}
-
-.sort__checkbox {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  top: 2px;
-  left: 0;
-  }
-
-.sort:hover .sort__name {
-  color: rgba(255, 255, 255, 0.60);
-}
-
-.sort:hover .sort__checkbox {
-  background-color: rgba(255, 255, 255, 0.60);
-}
-
-.sort__input[type="checkbox"]:checked +
-.sort__checkbox::before {
-  content: "";
-  position: absolute;
-  height: 13px;
-  width: 12px;
-  top: 3px;
-  left: 6px;
-  background-image: url(../images/icons/check.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: rotate(45deg);
-}
-
-.sort__radio {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #ffffff;
-}
-
-.sort:hover .sort__radio {
-  opacity: 0.6;
-}
-
-.sort__input[type="radio"]:checked +
-.sort__radio::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #3F5E72;
-  border-radius: 50%;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* ----- /SORT ----- */
-
 
 /* ----- PRICE ----- */
 
@@ -1115,14 +1116,15 @@ img {
 
 
 /* ----- HOTELS-LIST ----- */
+
 .hotels-list {
-  margin: 0 0 38px 0;
+  margin: 0 0 35px 0;
   padding: 0 0 38px 0;
   border-bottom: 1px solid #E6E6E6;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 19px;
+  gap: 16px;
 }
 
 .hotels-list__item {
@@ -1139,8 +1141,14 @@ img {
 .hotels-list__image {
   display: flex;
   order: -1;
+  transition: opacity 0.2s, transform 0.2s ease;
 
   margin-bottom: 15px;
+}
+
+.hotels-list__image:hover {
+  transform: scale(1.03);
+  opacity: 0.8;
 }
 
 .hotels-list__name {
@@ -1150,7 +1158,13 @@ img {
   font-size: 24px;
   text-decoration: none;
 
-  margin-bottom: 14px;
+  transition: color 0.1s ease;
+
+  margin-bottom: 17px;
+}
+
+.hotels-list__name:hover {
+  color: #756157;
 }
 
 .hotels-list-description {
@@ -1204,6 +1218,7 @@ img {
 
 /* ----- /HOTELS-LIST ----- */
 
+
 /* ----- PAGINATION ----- */
 
 .pagination__list {
@@ -1221,7 +1236,6 @@ img {
 
 .pagination__link {
   color: #ffffff;
-  outline: none;
 
   display: inline-block;
   padding: 12px 17px;
@@ -1257,8 +1271,6 @@ img {
 /* ----- /PAGINATION ----- */
 
 
-
-
 /* ----- MODAL ----- */
 
 .modal {
@@ -1269,8 +1281,15 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.2s ease-in-out;
 
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal--active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal__content {
@@ -1562,3 +1581,30 @@ img {
 }
 
 /* ----- /TOOLTIP ----- */
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control:hover {
+  color: #333333;
+}
+
+.control-input[type="checkbox"] {
+  background-color: #ffffff;
+  border-radius: 4px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.control-input[type="checkbox"]:checked {
+  background-image: url('../images/icons/check.svg');
+  background-repeat: no-repeat;
+  background-position: center top 5px;
+  background-size: 13px 10px;
+}
