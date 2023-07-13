@@ -225,7 +225,7 @@ img {
   position: relative;
 }
 
-.page-header:after {
+.main-page-header:after {
   content: "";
   position: absolute;
   left: 0;
@@ -686,6 +686,8 @@ img {
 /* ----- SOCIAL ----- */
 .social {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 145px;
 }
 
 .social__item {
@@ -712,8 +714,6 @@ img {
 .social__link:active path {
   fill: rgba(104, 162, 202, 0.3);
 }
-
-
 
 /* ----- /SOCIAL ----- */
 
@@ -878,12 +878,10 @@ img {
   background-size: 13px 11px;
 }
 
-
 .filter__input:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 3px #83b3d3;
 }
-
 
 .filter__label {
   font-size: 18px;
@@ -1095,6 +1093,7 @@ img {
 
 
 /* ----- RANGE-LINE ----- */
+
 .range-line {
   position: relative;
   height: 4px;
@@ -1187,9 +1186,14 @@ img {
   margin: 0;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   line-height: 21px;
 
   margin-bottom: 16px;
+}
+
+.hotels-list-description__type {
+  max-width: 165px;
 }
 
 .hotels-list-description__price {
@@ -1219,7 +1223,7 @@ img {
 .hotels-list__ratings {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .hotels-list__rating {
@@ -1230,6 +1234,7 @@ img {
   font-size: 16px;
   padding: 9px 22px 8px 23px;
   display: inline-block;
+  max-width: 140px;
 }
 
 .hotels-list__stars {
@@ -1443,6 +1448,7 @@ img {
 .modal-form__container {
   display: flex;
   justify-content: space-between;
+  gap: 88px;
   margin-bottom: 45px;
 }
 
